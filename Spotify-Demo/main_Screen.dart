@@ -18,25 +18,23 @@ class MainScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Üstteki Row: Profil fotoğrafı ve butonlar
               Row(
                 children: [
                   const ProfilePhoto(),
                   Row(
                     children: const [
                       TapButton(
-                        title: "Tümü",
+                        title: "All",
                         backgroundColor1: UtilityColors.green,
                         textColor1: UtilityColors.pageColor,
                       ),
-                      TapButton(title: "Müzik"),
-                      TapButton(title: "Podcast'ler"),
+                      TapButton(title: "Music"),
+                      TapButton(title: "Podcasts"),
                     ],
                   ),
                 ],
               ),
               const SizedBox(height: 15),
-              // Kartları iki sütun halinde gösteren alan
               SizedBox(
                 height: 300,
                 child: Row(
@@ -64,7 +62,6 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // "Picked for you" başlığı ve tek kart
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
@@ -77,7 +74,6 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
               _musicCard(),
-              // "New releases for you" başlığı
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Text(
@@ -89,7 +85,6 @@ class MainScreen extends StatelessWidget {
                       ),
                 ),
               ),
-              // Yatay ListView örneği 1
               SizedBox(
                 height: 100,
                 child: ListView(
@@ -101,7 +96,6 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // Yatay ListView örneği 2
               SizedBox(
                 height: 100,
                 child: ListView(
